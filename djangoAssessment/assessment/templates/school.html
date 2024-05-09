@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block title %} school detail {% endblock %}
+{% block content %}
+    <h1 class="text-center">School Details</h1>
+
+    <table class="table text-center mt-5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>School Name</th>
+            </tr>
+        </thead>
+    {% for sl in school %}
+        <tbody>
+            <tr>
+                <td>{{sl.id}}</td>
+                <td>{{sl.schoolName}}</td>
+            </tr>
+        </tbody>
+
+    {% endfor %}
+    </table>
+{% endblock %}

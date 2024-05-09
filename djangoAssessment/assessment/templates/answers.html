@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block title %} answer detail {% endblock %}
+{% block content %}
+    <h1 class="text-center">Answers Details</h1>
+
+    <table class="table text-center mt-5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Answers</th>
+            </tr>
+        </thead>
+    {% for ans in answers %}
+        <tbody>
+            <tr>
+                <td>{{ans.id}}</td>
+                <td>{{ans.answers}}</td>
+            </tr>
+        </tbody>
+
+    {% endfor %}
+    </table>
+{% endblock %}

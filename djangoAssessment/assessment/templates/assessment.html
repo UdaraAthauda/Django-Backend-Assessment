@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block title %} assessment detail {% endblock %}
+{% block content %}
+    <h1 class="text-center">Assessment Area Details</h1>
+
+    <table class="table text-center mt-5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Assessment</th>
+            </tr>
+        </thead>
+    {% for as in assessment %}
+        <tbody>
+            <tr>
+                <td>{{as.id}}</td>
+                <td>{{as.assessment}}</td>
+            </tr>
+        </tbody>
+
+    {% endfor %}
+    </table>
+{% endblock %}

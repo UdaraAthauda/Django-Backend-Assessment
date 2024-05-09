@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block title %} student detail {% endblock %}
+{% block content %}
+    <h1 class="text-center">Student Details</h1>
+
+    <table class="table text-center mt-5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+    {% for st in student %}
+        <tbody>
+            <tr>
+                <td>{{st.id}}</td>
+                <td>{{st.fullname}}</td>
+            </tr>
+        </tbody>
+
+    {% endfor %}
+    </table>
+{% endblock %}

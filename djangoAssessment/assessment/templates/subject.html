@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% block title %} subject detail {% endblock %}
+{% block content %}
+    <h1 class="text-center">Subjects Details</h1>
+
+    <table class="table text-center mt-5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Subject</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+    {% for sub in subject %}
+        <tbody>
+            <tr>
+                <td>{{sub.id}}</td>
+                <td>{{sub.subject}}</td>
+                <td>{{sub.score}}</td>
+            </tr>
+        </tbody>
+
+    {% endfor %}
+    </table>
+{% endblock %}

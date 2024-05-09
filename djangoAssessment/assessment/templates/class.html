@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block title %} Class detail {% endblock %}
+{% block content %}
+    <h1 class="text-center">Class Details</h1>
+
+    <table class="table text-center mt-5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Class Name</th>
+            </tr>
+        </thead>
+    {% for cl in class %}
+        <tbody>
+            <tr>
+                <td>{{cl.id}}</td>
+                <td>{{cl.Class}}</td>
+            </tr>
+        </tbody>
+
+    {% endfor %}
+    </table>
+{% endblock %}

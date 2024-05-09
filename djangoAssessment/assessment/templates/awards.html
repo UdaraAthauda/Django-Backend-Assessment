@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+{% block title %} awards detail {% endblock %}
+{% block content %}
+    <h1 class="text-center">Awards Details</h1>
+
+    <table class="table text-center mt-5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Award Name</th>
+            </tr>
+        </thead>
+    {% for aw in awards %}
+        <tbody>
+            <tr>
+                <td>{{aw.id}}</td>
+                <td>{{aw.awardName}}</td>
+            </tr>
+        </tbody>
+
+    {% endfor %}
+    </table>
+{% endblock %}
